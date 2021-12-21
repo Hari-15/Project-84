@@ -1,0 +1,12 @@
+.body_background {
+ text-align: center;
+ background-color: lightblue;
+}
+
+canvas {
+    background-color: white;
+}
+
+h1 {
+    color:red;
+}
