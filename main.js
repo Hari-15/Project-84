@@ -5,14 +5,14 @@ img_width = 300;
 img_height = 100;
 
 var img_image;
-var img_imgTag;
+
 
 img_x = 100;
 img_y = 100;
 
 function add() {
 	img_imgTag = new Image(); //defining a variable with a new image
-	img_imgTag.onload = uploadimg(); // setting a function, onloading this variable
+	img_imgTag.onload = uploadimg; // setting a function, onloading this variable
 	img_imgTag.src = img_image;   // load image
 }
 
@@ -40,13 +40,9 @@ function my_keydown(e)
 			arrowkey();
 			document.getElementById("type").innerHTML = "You pressed an arrow key";
 		}
-		else if((keyPressed = 17) || (keyPressed = 18) || (keyPressed = 27)) {
-			specialkey();
-			document.getElementById("type").innerHTML = "You pressed a special key";
-		}
-	else{
-		otherkey();
-		document.getElementById("type").innerHTML="You pressed a symbol or other key";
+	else {
+		specialkey();
+		document.getElementById("type").innerHTML="You pressed a special key";
 	}
 }
 
@@ -70,9 +66,5 @@ function specialkey()
 	img_image  = "spkey.png";
 	add();	
 }
-function otherkey()
-{
-	img_image="otherkey.png";
-	add();
-}
+
 	
